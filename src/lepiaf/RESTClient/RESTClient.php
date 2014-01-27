@@ -1,13 +1,13 @@
 <?php
 
-namespace lepiaf\RESTClient;
+namespace lepiaf\restclient;
 
 /**
  *
- * @package RESTClient
+ * @package restclient
  * @author Thierry Piaf
  **/
-class RESTClient
+class restclient
 {
 
 }
