@@ -1,5 +1,5 @@
 {
-    "name": "lepiaf/RESTClient",
+    "name": "lepiaf/restclient",
     "description": "Universal PHP Client to use REST API",
     "keywords": ["API"],
     "homepage": "http://moinax.github.io/BetaSeries/",
