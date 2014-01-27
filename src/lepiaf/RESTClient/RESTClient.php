@@ -19,17 +19,30 @@ class RestClient implements RestClientInterface
         $this->apiKey = $_apiKey;    
     }
     
-    public function addParameter($_parameter)
+    public function addParameter($key, $_parameter)
     {
-        array_push($this->parameters, $_parameter);    
+        $this->parameters[$key] = $_parameter;    
     }
     
     public function poke($_type, $_method)
     {
         $callUrl = self::URL.$_method;
-        echo $callUrl;
+        if($_type === "POST"){
+            
+        }else{ //append parameter by default
+            if(count($this->parameters)>0)
+            {
+                $callUrl .= "?";
+                foreach($this->parameters as $key=>&$parameter)
+                {
+                   $callUrl .= $key."=".$parameter;
+                }
+            }
+            echo $callUrl;
+        }
         $curlHandler = curl_init($callUrl);
         $options = array(
+            CURLOPT_USERAGENT => "PHP RESTClient",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HEADER => false,
             CURLOPT_HTTPHEADER => array(

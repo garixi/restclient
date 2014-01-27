@@ -1,5 +1,5 @@
 <?php
 require_once "src/lepiaf/restclient/restclient.php";
-use lepiaf\restclient\restclient;
-$client = new restclient("");
+use lepiaf\RestClient\RestClient;
+$client = new RestClient();
 var_dump($client->poke("GET", "shows/list"));
