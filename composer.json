@@ -1,0 +1,19 @@
+{
+    "name": "lepiaf/RESTClient",
+    "description": "Universal PHP Client to use REST API",
+    "keywords": ["API"],
+    "homepage": "http://moinax.github.io/BetaSeries/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thierry Piaf"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": { "lepiaf\\RESTClient": "src" }
+    }
+}
