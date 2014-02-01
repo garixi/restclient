@@ -2,6 +2,5 @@
 namespace lepiaf\RestClient;
 interface RestClientInterface
 {
-    public function poke($_type, $_method);
-    public function addParameter($key, $_parameter);
+    public function request($_type, $_method, $_parameters, $_returnFormat);
 }
