@@ -42,7 +42,7 @@ class RestClient implements RestClientInterface
     
     public function request($_type, $_method,$_parameters, $_returnFormat = self::JSON)
     {
-       $callURL = $this->$baseUrl.$_method;
+       $callURL = $this->baseUrl.$_method;
         
         if($_type === self::DELETE){
             $this->addOptions(CURLOPT_CUSTOMREQUEST, self::DELETE);
