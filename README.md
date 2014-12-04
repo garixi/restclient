@@ -7,13 +7,13 @@ Client to consume REST API ressource.
 ```json
 {
     "require":{
-        "lepiaf/restclient": "dev-master"
+        "garixi/restclient": "dev-master"
     }
 }
 ```
 
 ```php
-$client = new RestClient(API_KEY);
+$client = new RestClient("http://baseurl");
 $data = $client->request(RestClient::GET, "shows/list", array());
 ``` 
 
